@@ -7,4 +7,5 @@ def home(request):
         form = ThingForm(request.POST)
         if form.is_valid():
             form.save()
+    form = ThingForm()
     return render(request, 'home.html', {'form': form})
